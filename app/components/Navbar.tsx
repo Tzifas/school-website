@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { SCHOOL_NAME } from '../constants';
 
@@ -10,7 +11,10 @@ export default function Navbar() {
     <nav className="bg-[#025464] fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
+          <div className="flex items-center gap-3">
+            <Link href="/">
+              <Image src="/images/logo.png" alt="Sankofa Academy Logo" width={40} height={40} className="rounded-none" priority />
+            </Link>
             <Link href="/" className="text-white text-2xl font-bold">
               {SCHOOL_NAME}
             </Link>
